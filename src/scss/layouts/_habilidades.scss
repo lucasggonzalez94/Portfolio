@@ -1,0 +1,17 @@
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+}

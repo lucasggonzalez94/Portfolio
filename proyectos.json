@@ -1,0 +1,107 @@
+[
+    {
+        "titulo": "Buscador de Autos",
+        "imagen": "buscador-autos.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://buscador-autos-js.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/BuscadorDeAutos"
+    },
+    {
+        "titulo": "Citas en Veterinaria",
+        "imagen": "citas-vete.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://citas-vete-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/CitasConReact"
+    },
+    {
+        "titulo": "Carrito de Compras",
+        "imagen": "carrito.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://beprogrammer.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/carritoDeComprasPropio"
+    },
+    {
+        "titulo": "Cotizador de Criptomonedas",
+        "imagen": "cripto.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://cotizador-criptomonedas-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/Criptomonedas"
+    },
+    {
+        "titulo": "Cotizador Criptomonedas con React",
+        "imagen": "cripto-react.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://criptomonedas-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/criptomonedas-react"
+    },
+    {
+        "titulo": "Buscador de Recetas Bebidas",
+        "imagen": "bebidas.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://bebidas-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/bebidas"
+    },
+    {
+        "titulo": "Frases de Breaking Bad",
+        "imagen": "frases.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://breaking-bad-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/breakingbad"
+    },
+    {
+        "titulo": "Control de Gastos",
+        "imagen": "gastos.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://gastos-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/presupuestoReact"
+    },
+    {
+        "titulo": "Turnos Peluquería",
+        "imagen": "peluqueria.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://app-peluqueria-react.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/AppPeluqueria"
+    },
+    {
+        "titulo": "Consulta de Clima",
+        "imagen": "clima.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://clima-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/clima-react"
+    },
+    {
+        "titulo": "Buscador GitHub Jobs",
+        "imagen": "github.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://github-jobs-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/GithubJobs"
+    },
+    {
+        "titulo": "Buscador de Letras",
+        "imagen": "letras.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://buscador-letras-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/letras-react"
+    },
+    {
+        "titulo": "Cotizador de Seguros",
+        "imagen": "seguros.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://cotizador-seguros-react-lucas.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/cotizadorSeguros"
+    },
+    {
+        "titulo": "Festival de Rock",
+        "imagen": "festival.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://festival-rock.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/FestivalDeMusicaDeployment"
+    },
+    {
+        "titulo": "TA-TE-TI",
+        "imagen": "tateti.jpeg",
+        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
+        "link": "https://ta-te-ti-basico.netlify.app/",
+        "repositorio": "https://github.com/lucasggonzalez94/TATETI"
+    }
+]
