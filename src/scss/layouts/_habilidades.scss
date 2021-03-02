@@ -1,6 +1,7 @@
 .habilidades-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    @include grid(5, $separacion / 2);
+    grid-gap: 4rem;
 }
 
 .habilidad {
@@ -8,10 +9,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
 
-.icon {
-    width: 5rem;
-    height: 5rem;
-    text-align: center;
+    .icon {
+        width: 5rem;
+
+        i {
+            font-size: 5rem;
+        }
+
+        img {
+            width: 5rem;
+        }
+    }
 }

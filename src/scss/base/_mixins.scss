@@ -33,6 +33,7 @@
     display: $display;
     border: none;
     cursor: pointer;
+    border-radius: .5rem;
 
     &:hover {
         background-color: darken($bgcolor, 5);

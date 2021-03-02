@@ -1,0 +1,67 @@
+.formulario {
+    position: relative;
+    background-color: $gris;
+    border-radius: 2rem;
+    padding: 3rem 3rem 3rem 20rem;
+    display: flex;
+    height: 40rem;
+    align-items: center;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        width: 50rem;
+    }
+
+    input, textarea {
+        display: block;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: .5rem;
+        padding: .5rem;
+    }
+
+    input:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .nombre-apellido {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            display: inline-flex;
+        }
+
+        input:last-of-type {
+            margin-bottom: 2rem;
+        }
+    }
+
+    textarea {
+        color: #8d8d8d;
+    }
+}
+
+.info-contacto {
+    position: absolute;
+    width: 30rem;
+    left: -15rem;
+    background-color: $celeste;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    a {
+        color: $negro;
+        font-size: 3rem;
+    }
+
+    .enlaces-contacto {
+        display: flex;
+        justify-content: space-around;
+    }
+}
