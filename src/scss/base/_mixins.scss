@@ -39,3 +39,22 @@
         background-color: darken($bgcolor, 5);
     }
 }
+
+@mixin boton-gradiente($bgcolor1, $bgcolor2, $display) {
+    background: linear-gradient(-135deg, $bgcolor1, $bgcolor2);
+    color: $blanco;
+    font-weight: $bold;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: $separacion / 2;
+    display: $display;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition: 0.5s;
+
+    &:hover {
+        transform: scale(0.9);
+    }
+}

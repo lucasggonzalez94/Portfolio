@@ -6,6 +6,9 @@
     display: flex;
     height: 40rem;
     align-items: center;
+    background-color: rgba($color: $gris, $alpha: 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
 
     input, textarea {
         display: block;
@@ -50,9 +53,16 @@
     background-color: $celeste;
     border-radius: 2rem;
     padding: 2rem;
+    box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.5);
 
     p {
         font-size: 1.5rem;
+        margin: 0;
+    }
+
+    a {
+        font-size: 1.5rem;
+        color: $negro;
     }
 }
 
