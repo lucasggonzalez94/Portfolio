@@ -14,7 +14,7 @@
             <nav class="navegacion">
                 <a href="/">Inicio</a>
                 <a href="#sobre-mi">Sobre mí</a>
-                <a href="#habilidades">Habilidades</a>
+                <a href="#tecnologias">Tecnologías</a>
                 <a href="#proyectos">Proyectos</a>
                 <a href="#contacto">Contacto</a>
             </nav>
@@ -36,96 +36,96 @@
         </div>
     </section>
 
-    <section class="contenedor" id="habilidades">
+    <section class="contenedor" id="tecnologias">
         <div class="contenido">
-            <h2>Habilidades</h2>
+            <h2>Tecnologías</h2>
 
-            <div class="habilidades-grid">
-                <div class="habilidad">
+            <div class="tecnologias-grid">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-html5"></i>
                     </div>
                     <p>HTML</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-css3-alt"></i>
                     </div>
                     <p>CSS</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-sass"></i>
                     </div>
                     <p>SASS/SCSS</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-js-square"></i>
                     </div>
                     <p>JavaScript</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-react"></i>
                     </div>
                     <p>React JS</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-node"></i>
                     </div>
                     <p>Node JS</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-java"></i>
                     </div>
                     <p>Java</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <img src="/build/img/c.svg" alt="c sharp">
                     </div>
                     <p>C# (.NET)</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-php"></i>
                     </div>
                     <p>PHP</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <p>MySQL</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-git"></i>
                     </div>
                     <p>GIT</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <img src="/build/img/photoshop.svg" alt="c sharp">
                     </div>
                     <p>Photoshop</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <img src="/build/img/illustrator.svg" alt="c sharp">
                     </div>
                     <p>Illustrator</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-windows"></i>
                     </div>
                     <p>Windows</p>
                 </div>
-                <div class="habilidad">
+                <div class="tecnologia">
                     <div class="icon">
                         <i class="fab fa-linux"></i>
                     </div>
@@ -179,8 +179,7 @@
     <section class="contenedor" id="contacto">
         <div class="contenido">
             
-            <form action="" method="post" class="formulario">
-
+            <div class="formulario">
                 <div class="info-contacto">
                     <h4>Contacto</h4>
 
@@ -191,33 +190,37 @@
                     </div>
 
                     <div class="enlaces-contacto">
-                        <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/lucas-gonzalez-9168031b8/"><i
+                                class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/lucasggonzalez94"><i class="fab fa-github-square"></i></a>
                     </div>
                 </div>
 
-                <div class="inputs">
-                    <div class="nombre-apellido">
-                        <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *">
-                        <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *">
+                <form action="" method="post">
+                    <div class="inputs">
+                        <div class="nombre-apellido">
+                            <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *">
+                            <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *">
+                        </div>
+
+                        <input type="email" name="email" id="email" placeholder="Tu Email *">
+                        <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono">
+                        <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
+                        <textarea name="mensaje" id="mensaje"></textarea>
+
+                        <input type="submit" value="Enviar" class="btn">
                     </div>
-
-                    <input type="email" name="email" id="email" placeholder="Tu Email *">
-                    <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono">
-                    <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
-                    <textarea name="mensaje" id="mensaje"></textarea>
-
-                    <input type="submit" value="Enviar" class="btn">
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="footer">
+        <p>Todos los Derechos Reservados 2020 - Lucas Gonzalez &copy;</p>
         <nav class="navegacion">
             <a href="/">Inicio</a>
             <a href="#sobre-mi">Sobre mí</a>
-            <a href="#habilidades">Habilidades</a>
+            <a href="#tecnologias">Tecnologías</a>
             <a href="#proyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </nav>

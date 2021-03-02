@@ -1,24 +1,24 @@
-.habilidades-grid {
+.tecnologias-grid {
     width: 100%;
     @include grid(5, $separacion / 2);
     grid-gap: 4rem;
 }
 
-.habilidad {
+.tecnologia {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    .icon {
+.icon {
+    width: 5rem;
+
+    i {
+        font-size: 5rem;
+    }
+
+    img {
         width: 5rem;
-
-        i {
-            font-size: 5rem;
-        }
-
-        img {
-            width: 5rem;
-        }
     }
 }

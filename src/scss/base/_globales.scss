@@ -9,7 +9,10 @@ body {
     font-family: $fuente_principal;
     font-size: 1.6rem;
     line-height: 1.8;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;

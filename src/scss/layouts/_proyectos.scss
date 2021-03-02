@@ -1,8 +1,5 @@
 .proyectos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    @include grid(3, $separacion / 2);
 }
 
 .card {
@@ -14,6 +11,9 @@
     cursor: pointer;
     transition: 0.4s;
     margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .descripcion-proyecto {
         visibility: hidden;
@@ -33,5 +33,11 @@
     .btn {
         width: 50%;
         margin: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: $morado;
+        margin-top: 2.5rem;
     }
 }

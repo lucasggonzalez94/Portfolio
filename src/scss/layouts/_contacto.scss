@@ -7,12 +7,6 @@
     height: 40rem;
     align-items: center;
 
-    .inputs {
-        display: flex;
-        flex-direction: column;
-        width: 50rem;
-    }
-
     input, textarea {
         display: block;
         margin-bottom: 2rem;
@@ -25,21 +19,27 @@
         margin-bottom: 0;
     }
 
-    .nombre-apellido {
-        display: flex;
-        justify-content: space-between;
-
-        input {
-            display: inline-flex;
-        }
-
-        input:last-of-type {
-            margin-bottom: 2rem;
-        }
-    }
-
     textarea {
         color: #8d8d8d;
+    }
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+}
+
+.nombre-apellido {
+    display: flex;
+    justify-content: space-between;
+
+    input {
+        display: inline-flex;
+    }
+
+    input:last-of-type {
+        margin-bottom: 2rem;
     }
 }
 
@@ -54,14 +54,19 @@
     p {
         font-size: 1.5rem;
     }
+}
+
+.enlaces-contacto {
+    display: flex;
+    justify-content: center;
 
     a {
         color: $negro;
         font-size: 3rem;
+        margin-right: 2rem;
     }
 
-    .enlaces-contacto {
-        display: flex;
-        justify-content: space-around;
+    a:last-of-type {
+        margin-right: 0;
     }
 }
