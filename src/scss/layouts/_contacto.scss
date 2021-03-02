@@ -1,14 +1,15 @@
 .formulario {
     position: relative;
-    background-color: $gris;
     border-radius: 2rem;
-    padding: 3rem 3rem 3rem 20rem;
     display: flex;
-    height: 40rem;
+    height: 90%;
     align-items: center;
+    justify-content: center;
     background-color: rgba($color: $gris, $alpha: 0.3);
     backdrop-filter: blur(10px);
     box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
+    padding: 15rem 3rem 3rem 3rem;
+    margin-top: 10rem;
 
     input, textarea {
         display: block;
@@ -16,40 +17,53 @@
         border: none;
         border-radius: .5rem;
         padding: .5rem;
+        width: 100%;
     }
 
     input:last-of-type {
         margin-bottom: 0;
     }
 
-    textarea {
-        color: #8d8d8d;
+    @include desktop-min(1500px) {
+        padding: 3rem 3rem 3rem 20rem;
+        height: 40rem;
+        width: auto;
     }
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    width: 50rem;
+    width: 100%;
 }
 
 .nombre-apellido {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 
     input {
         display: inline-flex;
     }
 
+    input:first-child {
+        margin-right: 2rem;
+    }
+
     input:last-of-type {
         margin-bottom: 2rem;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
 .info-contacto {
     position: absolute;
+    top: -10rem;
     width: 30rem;
-    left: -15rem;
+    height: 20rem;
     background-color: $celeste;
     border-radius: 2rem;
     padding: 2rem;
@@ -63,6 +77,11 @@
     a {
         font-size: 1.5rem;
         color: $negro;
+    }
+
+    @include desktop-min(1500px) {
+        left: -15rem;
+        top: 10rem;
     }
 }
 

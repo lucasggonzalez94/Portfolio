@@ -1,7 +1,22 @@
 .tecnologias-grid {
     width: 100%;
-    @include grid(5, $separacion / 2);
-    grid-gap: 4rem;
+    // @include grid(5, $separacion / 2);
+    // grid-gap: 4rem;
+
+    @include telefono {
+        @include grid(2, $separacion / 4);
+        grid-gap: 2rem;
+    }
+
+    @include tablet {
+        @include grid(3, $separacion / 4);
+        grid-gap: 2rem;
+    }
+
+    @include desktop {
+        @include grid(5, $separacion / 2);
+        grid-gap: 4rem;
+    }
 }
 
 .tecnologia {

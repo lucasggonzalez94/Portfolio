@@ -9,14 +9,17 @@ body {
     font-family: $fuente_principal;
     font-size: 1.6rem;
     line-height: 1.8;
-    background-size: cover;
+    background-size: 850px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0 0;
-    // backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+        background-size: cover;
+    }
 }
 
 .webp body {
@@ -34,12 +37,11 @@ p {
 .navegacion {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     height: 12rem;
 
     a {
-        margin-right: 5rem;
         font-weight: $bold;
         color: $blanco;
         position: relative;
@@ -66,6 +68,14 @@ p {
 
         &:hover {
             color: $moradoOscuro;
+        }
+    }
+
+    @include desktop {
+        justify-content: flex-end;
+
+        a {
+            margin-right: 5rem;
         }
     }
 }

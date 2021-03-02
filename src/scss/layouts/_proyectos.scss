@@ -1,5 +1,11 @@
 .proyectos {
-    @include grid(3, $separacion / 2);
+    @include desktop-min(1080px) {
+        @include grid(2, $separacion / 4);
+    }
+
+    @include desktop-min(1650px) {
+        @include grid(3, $separacion / 4);
+    }
 }
 
 .card {
@@ -12,7 +18,7 @@
     height: 25rem;
     cursor: pointer;
     transition: 0.4s;
-    margin: 0 4rem;
+    margin: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

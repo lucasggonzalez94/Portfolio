@@ -7,7 +7,13 @@
     p {
         margin-left: 5rem;
         color: $blanco;
-        font-size: 1.5rem;
+        font-size: .8rem;
         width: 50%;
+    }
+
+    @include tablet {
+        p {
+            font-size: 1.5rem;
+        }
     }
 }
