@@ -3,8 +3,21 @@ document.addEventListener('DOMContentLoaded', () => {
     agregarProyectos();
     darkMode();
     esconderMenu();
+    copyright();
+    resetFormulario();
 
 })
+
+function resetFormulario() {
+    const formularioContacto = document.querySelector('#formulario');
+    formularioContacto.reset();
+}
+
+function copyright() {
+    const copyright = document.querySelector('#copyright');
+
+    copyright.innerHTML = `Todos los Derechos Reservados ${new Date().getFullYear()} - Lucas Gonzalez &copy;`;
+}
 
 function esconderMenu() {
     links = [

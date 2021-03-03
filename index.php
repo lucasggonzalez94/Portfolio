@@ -1,3 +1,50 @@
+<?php
+    $nombre = '';
+    $apellido = '';
+    $email = '';
+    $telefono = '';
+    $empresa = '';
+    $asunto = '';
+    $mensaje = '';
+
+    $errores = [];
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Validar que los campos no esten vacios
+        $nombre = ($_POST['nombre']);
+        $apellido = $_POST['apellido'];
+        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
+        $empresa = $_POST['empresa'];
+        $asunto = $_POST['asunto'];
+        $mensaje = $_POST['mensaje'];
+
+        // Validar que los campos tengan el contenido adecuado
+        if (!$nombre) {
+            $errores[] = 'El nombre es obligatorio';
+        }
+
+        if (!$apellido) {
+            $errores[] = 'El apellido es obligatorio';
+        }
+
+        if (!$email) {
+            $errores[] = 'El e-mail es obligatorio o no es válido';
+        }
+
+        if (!$asunto) {
+            $errores[] = 'El asunto es obligatorio';
+        }
+
+        if (!$mensaje) {
+            $errores[] = 'El mensaje es obligatorio';
+        }
+
+        // Enviar email
+        include 'correo.php';
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -37,7 +84,7 @@
         <div class="contenido">
             <h2>Sobre mí</h2>
 
-            <p>Soy un estudiante avanzado de la Tecnicatura Superior en Programación en la UTN (ya me encuentro en el ultimo semestre) en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías como Java, HTML, CSS, SASS, JavaScript, React JS, .NET, MySQL, conocimientos básicos en Node JS, PHP y más. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de ganar experiencia y expandir mis conocimientos en las tecnologías actuales.</p>
+            <p>¡Hola! te cuento un poco sobre mí. Soy estudiante de programación, tanto autodidacta como a nivel universitario, cursando el último cuatrimestre en la Tecnicatura Superior en Programación de la Universidad Tecnológica Nacional de Mendoza (solo me quedan cuatro materias por cursar), estoy en busca de adentrarme en el mundo laboral, con conocimientos en diferentes tecnologías, especializandome en el desarrollo web, tanto en el front-end como en el back-end. Poseo un nivel de inglés intermedio, responsable, proactivo, con capacidad de trabajar en equipo, de adaptarme al cambio y aprender rápidamente, con muchas ganas de ganar experiencia y expandir mis conocimientos en las tecnologías actuales.</p>
         </div>
     </section>
 
@@ -168,20 +215,26 @@
                     </div>
                 </div>
 
-                <form action="" method="post">
+                <form method="post" id="formulario">
                     <div class="inputs">
                         <fieldset>
                             <legend>Envíame un E-mail</legend>
                             <div class="nombre-apellido">
-                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *">
-                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *">
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *" value="<?php echo $nombre ?>" required>
+                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *" value="<?php echo $apellido ?>" required>
                             </div>
 
-                            <input type="email" name="email" id="email" placeholder="Tu Email *">
-                            <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono">
-                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
-                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *">
-                            <textarea name="mensaje" id="mensaje"></textarea>
+                            <input type="email" name="email" id="email" placeholder="Tu Email *" value="<?php echo $email ?>" required>
+                            <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" value="<?php echo $telefono ?>">
+                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" value="<?php echo $empresa ?>">
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>" required>
+                            <textarea name="mensaje" id="mensaje" required><?php echo $mensaje ?></textarea>
+
+                            <?php foreach($errores as $error): ?>
+                                <div class="alerta error">
+                                    <?php echo $error; ?>
+                                </div>
+                            <?php endforeach; ?>
 
                             <input type="submit" value="Enviar" class="btn">
                         </fieldset>
@@ -192,7 +245,7 @@
     </section>
 
     <footer class="footer">
-        <p>Todos los Derechos Reservados 2020 - Lucas Gonzalez &copy;</p>
+        <p id="copyright"></p>
         <nav class="navegacion">
             <a href="/">Inicio</a>
             <a href="#sobre-mi">Sobre mí</a>
