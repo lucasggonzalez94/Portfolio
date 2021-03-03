@@ -1,14 +1,39 @@
 <?php
-    $miEmail = 'lucasggonzalez@outlook.com';
-    $mensajeCompleto = "Remitente: $nombre $apellido\nTeléfono: $telefono\nEmpresa: $empresa\n\n> $mensaje";
+    // require_once('build/PHPMailer/src/PHPMailer.php');
+    use PHPMailer\PHPMailer\PHPMailer;
 
-    // echo '<pre>';
-    // var_dump($mensajeCompleto);
-    // echo '</pre>';
+    require 'build/PHPMailer/src/Exception.php';
+    require 'build/PHPMailer/src/PHPMailer.php';
+    require 'build/PHPMailer/src/SMTP.php';
+    
+    $mailer = new PHPMailer();
+    
+    $mailer->setFrom($email, $nombre . $apellido);
+    $mailer->addReplyTo($email, $nombre . $apellido);
 
-    // exit;
+    $miEmail = 'lucasggonzalez94@outlook.com';
 
-    $header = "From: '$email'" . "\r\n";
-    $header .= "Reply-To: '$miEmail" . "\r\n";
-    $header .= "X-Mailer: PHP/" . phpversion();
-    $mail = mail($miEmail, $asunto, $mensajeCompleto, $header);
+    $mailer->addAddress($miEmail, 'Lucas Gonzalez');
+    $mailer->Subject = $asunto;
+
+    $mensajeCompleto = "Remitente: $nombre $apellido\nTelefono: $telefono\nEmpresa: $empresa\n\n> $mensaje";
+    $mailer->msgHTML($mensajeCompleto);
+
+    if(!$mailer->send()) {
+        echo "Error al enviar el mensaje: " . $mail­->ErrorInfo;
+        exit;
+    } else {
+        echo "Mensaje enviado!!";
+    }
+    header('location: /');
+?>
+
+<script>
+    Swal.fire({
+        // position: 'top-end',
+        icon: 'success',
+        title: 'E-mail enviado correctamente',
+        showConfirmButton: false,
+        timer: 2000
+    })
+</script>

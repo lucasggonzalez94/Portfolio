@@ -39,9 +39,6 @@
         if (!$mensaje) {
             $errores[] = 'El mensaje es obligatorio';
         }
-
-        // Enviar email
-        include 'correo.php';
     }
 ?>
 
@@ -53,7 +50,7 @@
     <meta name="description" content="Portfolio Lucas Gonzalez">
     <link rel="stylesheet" href="/build/icomoon/style.css">
     <link rel="stylesheet" href="/build/css/app.css">
-    <link rel="shortcut icon" href="/build/img/favicon.png">
+    <link rel="shortcut icon" href="build/img/favicon.png">
     <title>Lucas González | Portfolio</title>
 </head>
 <body>
@@ -73,10 +70,12 @@
         </header>
 
         <div class="contenedor-avatar">
-            <div class="avatar">
-                <img src="/build/img/avatar.png" alt="avatar" id="avatar">
-                <h1>Portfolio<span>Lucas González</span></h1>
-            </div>
+            <a href="#sobre-mi">
+                <div class="avatar">
+                    <img src="/build/img/avatar.png" alt="avatar" id="avatar">
+                    <h1>Lucas González<span>Portfolio</span></h1>
+                </div>
+            </a>
         </div>
     </main>
 
@@ -256,6 +255,11 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/build/js/bundle.min.js"></script>
 </body>
 </html>
+<?php
+    // Enviar email
+    include 'correo.php';
+?>
