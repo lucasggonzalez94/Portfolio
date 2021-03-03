@@ -63,13 +63,6 @@
         "repositorio": "https://github.com/lucasggonzalez94/AppPeluqueria"
     },
     {
-        "titulo": "Consulta de Clima",
-        "imagen": "clima.jpeg",
-        "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
-        "link": "https://clima-react-lucas.netlify.app/",
-        "repositorio": "https://github.com/lucasggonzalez94/clima-react"
-    },
-    {
         "titulo": "Buscador GitHub Jobs",
         "imagen": "github.jpeg",
         "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing lit. Vitae nihil minima enim ? Quasi sit sed eum nam ea doloribus necessitatibus.",
