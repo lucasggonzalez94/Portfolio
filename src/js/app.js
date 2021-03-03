@@ -1,34 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     agregarProyectos();
-    // darkMode();
+    darkMode();
 
 })
 
-// function darkMode() {
+function darkMode() {
 
-//     const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
-//     if (prefiereDarkMode.matches) {
-//         document.body.classList.add('dark-mode');
-//     } else {
-//         document.body.classList.remove('dark-mode');
-//     }
+    if (prefiereDarkMode.matches) {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+    }
 
-//     prefiereDarkMode.addEventListener('change', () => {
-//         if (prefiereDarkMode.matches) {
-//             document.body.classList.add('dark-mode');
-//         } else {
-//             document.body.classList.remove('dark-mode');
-//         }
-//     })
+    prefiereDarkMode.addEventListener('change', () => {
+        if (prefiereDarkMode.matches) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    })
 
-//     const btnDarkMode = document.querySelector('#btn-dark');
-//     btnDarkMode.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         document.body.classList.toggle('dark-mode');
-//     })
-// }
+    const btnDarkMode = document.querySelector('#btn-dark');
+    btnDarkMode.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.body.classList.toggle('dark-mode');
+    })
+}
 
 async function agregarProyectos() {
 
