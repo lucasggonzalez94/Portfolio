@@ -14,7 +14,7 @@
     box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
     overflow: hidden;
     border-radius: 2rem;
-    width: 35rem;
+    width: 32rem;
     height: 25rem;
     cursor: pointer;
     transition: 0.4s;
@@ -22,6 +22,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include media-max(35rem) {
+        width: 25rem;
+    }
 
     .descripcion-proyecto {
         visibility: hidden;
