@@ -1,9 +1,9 @@
 .proyectos {
-    @include desktop-min(1080px) {
+    @include media-min(1080px) {
         @include grid(2, $separacion / 4);
     }
 
-    @include desktop-min(1650px) {
+    @include media-min(1650px) {
         @include grid(3, $separacion / 4);
     }
 }

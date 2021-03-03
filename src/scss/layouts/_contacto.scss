@@ -24,10 +24,17 @@
         margin-bottom: 0;
     }
 
-    @include desktop-min(1500px) {
+    @include media-min(1500px) {
         padding: 3rem 3rem 3rem 20rem;
         height: 40rem;
         width: auto;
+    }
+
+    fieldset {
+        color: $grisOscuro;
+        border: .1rem solid $grisOscuro;
+        border-radius: 2rem;
+        padding: 2rem;
     }
 }
 
@@ -79,7 +86,7 @@
         color: $negro;
     }
 
-    @include desktop-min(1500px) {
+    @include media-min(1500px) {
         left: -15rem;
         top: 10rem;
     }

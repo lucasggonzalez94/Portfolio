@@ -2,26 +2,50 @@ document.addEventListener('DOMContentLoaded', () => {
     
     agregarProyectos();
     darkMode();
+    esconderMenu();
 
 })
 
+function esconderMenu() {
+    links = [
+        linkSobreMi = document.querySelector('#link-sobre-mi'),
+        linkTecnologias = document.querySelector('#link-tecnologias'),
+        linkProyectos = document.querySelector('#link-proyectos'),
+        linkContacto = document.querySelector('#link-contacto')
+    ]
+
+    links.forEach(link => {
+        link.addEventListener('click', changeInput);
+    });
+}
+
+function changeInput() {
+    const inputActive = document.querySelector('#active');
+
+    if (inputActive.checked === true) {
+        inputActive.checked = false;
+    } else {
+        inputActive.checked = true;
+    }
+}
+
 function darkMode() {
 
-    const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+    // const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if (prefiereDarkMode.matches) {
-        document.body.classList.add('dark-mode');
-    } else {
-        document.body.classList.remove('dark-mode');
-    }
+    // if (prefiereDarkMode.matches) {
+    //     document.body.classList.add('dark-mode');
+    // } else {
+    //     document.body.classList.remove('dark-mode');
+    // }
 
-    prefiereDarkMode.addEventListener('change', () => {
-        if (prefiereDarkMode.matches) {
-            document.body.classList.add('dark-mode');
-        } else {
-            document.body.classList.remove('dark-mode');
-        }
-    })
+    // prefiereDarkMode.addEventListener('change', () => {
+    //     if (prefiereDarkMode.matches) {
+    //         document.body.classList.add('dark-mode');
+    //     } else {
+    //         document.body.classList.remove('dark-mode');
+    //     }
+    // })
 
     const btnDarkMode = document.querySelector('#btn-dark');
     btnDarkMode.addEventListener('click', (e) => {

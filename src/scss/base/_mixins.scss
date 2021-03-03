@@ -17,13 +17,13 @@
     }
 }
 
-@mixin desktop-min($minwidth) {
+@mixin media-min($minwidth) {
     @media (min-width: $minwidth) {
         @content;
     }
 }
 
-@mixin desktop-max($maxwidth) {
+@mixin media-max($maxwidth) {
     @media (max-width: $maxwidth) {
         @content;
     }

@@ -17,10 +17,10 @@
             <label for="active" class="btn-menu"><i class="fas fa-bars"></i></i></label>
             <nav class="navegacion">
                 <a href="/">Inicio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#tecnologias">Tecnologías</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#sobre-mi" id="link-sobre-mi">Sobre mí</a>
+                <a href="#tecnologias" id="link-tecnologias">Tecnologías</a>
+                <a href="#proyectos" id="link-proyectos">Proyectos</a>
+                <a href="#contacto" id="link-contacto">Contacto</a>
                 <a href="#" id="btn-dark" class="btn-dark"><i class="fas fa-moon"></i></a>
             </nav>
         </header>
@@ -173,17 +173,21 @@
 
                 <form action="" method="post">
                     <div class="inputs">
-                        <div class="nombre-apellido">
-                            <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *">
-                            <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *">
-                        </div>
+                        <fieldset>
+                            <legend>Envíame un E-mail</legend>
+                            <div class="nombre-apellido">
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *">
+                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *">
+                            </div>
 
-                        <input type="email" name="email" id="email" placeholder="Tu Email *">
-                        <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono">
-                        <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
-                        <textarea name="mensaje" id="mensaje"></textarea>
+                            <input type="email" name="email" id="email" placeholder="Tu Email *">
+                            <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono">
+                            <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa">
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *">
+                            <textarea name="mensaje" id="mensaje"></textarea>
 
-                        <input type="submit" value="Enviar" class="btn">
+                            <input type="submit" value="Enviar" class="btn">
+                        </fieldset>
                     </div>
                 </form>
             </div>
