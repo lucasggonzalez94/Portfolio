@@ -27,10 +27,13 @@
         visibility: hidden;
         opacity: 0;
         transition: 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 
     &:hover {
-        height: 60rem;
+        height: 70rem;
     }
 
     &:hover .descripcion-proyecto {
@@ -46,6 +49,7 @@
     h3 {
         font-size: 2rem;
         color: $morado;
-        margin-top: 2.5rem;
+        margin: 3rem 0;
+        line-height: 2.5rem;
     }
 }

@@ -1,0 +1,73 @@
+.webp .dark-mode {
+    background-image: url(/build/img/bg-dark.webp);
+}
+
+.no-webp .dark-mode {
+    background-image: url(/build/img/bg-dark.png);
+}
+
+.dark-mode {
+
+    h1, h2, h3, h4, p {
+        color: $gris;
+    }
+
+    .navegacion {
+        background: linear-gradient(-135deg, darken($morado, 20), darken($celeste, 20));
+    }
+
+    .header {
+
+        .btn-menu {
+            background: linear-gradient(-135deg, darken($morado, 20), darken($celeste, 20));
+        }
+    }
+
+    .contenido {
+        background-color: rgba($color: $grisOscuro, $alpha: 0.3);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.603);
+    }
+
+    .avatar {
+        background: #888888;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.603);
+    }
+
+    .icon {
+
+        i, span {
+            color: $gris;
+        }
+    }
+
+    .card {
+        background-color: rgba($color: $grisOscuro, $alpha: 0.1);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.603);
+
+        h3 {
+            color: $celeste;
+        }
+    }
+
+    .formulario {
+        background-color: rgba($color: $grisOscuro, $alpha: 0.1);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.603);
+    }
+
+    input,
+    textarea {
+        background: #5a5a5a;
+    }
+
+    .btn {
+        @include boton-gradiente($morado, $celeste, block);
+    }
+
+    .info-contacto {
+        background-color: darken($celeste, 20);
+
+        a {
+            color: $gris;
+        }
+    }
+}

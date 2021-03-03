@@ -34,54 +34,7 @@ p {
     font-size: 2rem;
 }
 
-.navegacion {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 12rem;
-
-    a {
-        font-weight: $bold;
-        color: $blanco;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:after {
-            content: "";
-            width: 120%;
-            height: 3rem;
-            background: rgba($color: $blanco, $alpha: 0.5);
-            position: absolute;
-            border-radius: 50px;
-            transform: scaleY(0);
-            transition: 0.3s;
-            padding: 2rem;
-            z-index: -1;
-        }
-
-        &:hover:after {
-            transform: scaleY(1);
-        }
-
-        &:hover {
-            color: $moradoOscuro;
-        }
-    }
-
-    @include desktop {
-        justify-content: flex-end;
-
-        a {
-            margin-right: 5rem;
-        }
-    }
-}
-
 .contenedor {
-    // height: auto;
     width: 80%;
     display: flex;
     justify-content: center;
