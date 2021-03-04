@@ -3,7 +3,6 @@
 
     @include telefono {
         @include grid(2, $separacion / 4);
-        grid-gap: 2rem;
     }
 
     @include tablet {
@@ -22,12 +21,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    p {
+        font-size: 1.8rem;
+
+        @include telefono {
+            font-size: 2rem;
+        }
+    }
 }
 
 .icon {
-    width: 5rem;
+    width: 3rem;
+
+    @include telefono {
+        width: 5rem;
+    }
 
     i {
-        font-size: 5rem;
+        font-size: 3rem;
+
+        @include telefono {
+            font-size: 5rem;
+        }
     }
 }

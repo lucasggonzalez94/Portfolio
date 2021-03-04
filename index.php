@@ -1,6 +1,59 @@
 <?php
     session_start();
-    include 'validacion.php';
+    // echo $_SESSION['resultado'];
+
+    $nombre = '';
+    $apellido = '';
+    $email = '';
+    $telefono = '';
+    $empresa = '';
+    $asunto = '';
+    $mensaje = '';
+
+    $errores = [];
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Validar que los campos no esten vacios
+        $nombre = ($_POST['nombre']);
+        $apellido = $_POST['apellido'];
+        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
+        $empresa = $_POST['empresa'];
+        $asunto = $_POST['asunto'];
+        $mensaje = $_POST['mensaje'];
+
+        $_SESSION['nombre'] = $nombre;
+        $_SESSION['mensaje'] = $mensaje;
+        $_SESSION['email'] = $email;
+        $_SESSION['telefono'] = $telefono;
+        $_SESSION['empresa'] = $empresa;
+        $_SESSION['asunto'] = $asunto;
+        $_SESSION['mensaje'] = $mensaje;
+
+        // Validar que los campos tengan el contenido adecuado
+        if (!$nombre) {
+            $errores[] = 'El nombre es obligatorio';
+        }
+
+        if (!$apellido) {
+            $errores[] = 'El apellido es obligatorio';
+        }
+
+        if (!$email) {
+            $errores[] = 'El e-mail es obligatorio o no es válido';
+        }
+
+        if (!$asunto) {
+            $errores[] = 'El asunto es obligatorio';
+        }
+
+        if (!$mensaje) {
+            $errores[] = 'El mensaje es obligatorio';
+        }
+        
+        // Enviar email
+        header('location: correo.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -244,3 +297,5 @@
     <script src="/build/js/bundle.min.js"></script>
 </body>
 </html>
+<?php
+    $_SESSION['resultado'] = 3;

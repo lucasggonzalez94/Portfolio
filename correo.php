@@ -1,12 +1,22 @@
 <?php
-
-    // session_start();
-
+    session_start();
+    
     use PHPMailer\PHPMailer\PHPMailer;
 
     require 'build/PHPMailer/src/Exception.php';
     require 'build/PHPMailer/src/PHPMailer.php';
     require 'build/PHPMailer/src/SMTP.php';
+
+    $nombre = $_SESSION['nombre'];
+    $apellido = $_SESSION['apellido'];
+    $email = $_SESSION['email'];
+    $telefono = $_SESSION['telefono'];
+    $empresa = $_SESSION['empresa'];
+    $asunto = $_SESSION['asunto'];
+    $mensaje = $_SESSION['mensaje'];
+
+    $resultado = 0;
+
     $mailer = new PHPMailer();
     
     $mailer->setFrom($email, $nombre . " " . $apellido);
@@ -23,7 +33,6 @@
     if(!$mailer->send()) {
         $_SESSION['resultado'] = 0;
     } else {
-        // echo "Mensaje enviado";
         $_SESSION['resultado'] = 1;
         header('location: /');
     }
