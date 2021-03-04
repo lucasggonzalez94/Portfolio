@@ -23,7 +23,7 @@
         $mensaje = $_POST['mensaje'];
 
         $_SESSION['nombre'] = $nombre;
-        $_SESSION['mensaje'] = $mensaje;
+        $_SESSION['apellido'] = $apellido;
         $_SESSION['email'] = $email;
         $_SESSION['telefono'] = $telefono;
         $_SESSION['empresa'] = $empresa;
@@ -257,7 +257,7 @@
                                             icon: 'error',
                                             title: 'Error al enviar email',
                                             showConfirmButton: false,
-                                            timer: 2000
+                                            timer: 2500
                                         })
                                     </script>
                                 <?php endif;
@@ -268,7 +268,7 @@
                                             icon: 'success',
                                             title: 'Email enviado correctamente',
                                             showConfirmButton: false,
-                                            timer: 2000
+                                            timer: 2500
                                         })
                                     </script>
                                 <?php endif;

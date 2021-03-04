@@ -9,8 +9,8 @@
 }
 
 .card {
-    background-color: rgba($color: $gris, $alpha: 0.3);
-    backdrop-filter: blur(10px);
+    background-color: rgba($color: $gris, $alpha: 0.5);
+    // backdrop-filter: blur(10px);
     box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.5);
     overflow: hidden;
     border-radius: 2rem;
