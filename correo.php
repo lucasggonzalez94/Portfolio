@@ -1,15 +1,16 @@
 <?php
-    // require_once('build/PHPMailer/src/PHPMailer.php');
+
+    // session_start();
+
     use PHPMailer\PHPMailer\PHPMailer;
 
     require 'build/PHPMailer/src/Exception.php';
     require 'build/PHPMailer/src/PHPMailer.php';
     require 'build/PHPMailer/src/SMTP.php';
-    
     $mailer = new PHPMailer();
     
-    $mailer->setFrom($email, $nombre . $apellido);
-    $mailer->addReplyTo($email, $nombre . $apellido);
+    $mailer->setFrom($email, $nombre . " " . $apellido);
+    $mailer->addReplyTo($email, $nombre . " " . $apellido);
 
     $miEmail = 'lucasggonzalez94@outlook.com';
 
@@ -20,20 +21,9 @@
     $mailer->msgHTML($mensajeCompleto);
 
     if(!$mailer->send()) {
-        echo "Error al enviar el mensaje: " . $mail­->ErrorInfo;
-        exit;
+        $_SESSION['resultado'] = 0;
     } else {
-        echo "Mensaje enviado!!";
+        // echo "Mensaje enviado";
+        $_SESSION['resultado'] = 1;
+        header('location: /');
     }
-    header('location: /');
-?>
-
-<script>
-    Swal.fire({
-        // position: 'top-end',
-        icon: 'success',
-        title: 'E-mail enviado correctamente',
-        showConfirmButton: false,
-        timer: 2000
-    })
-</script>

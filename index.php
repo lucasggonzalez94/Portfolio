@@ -1,45 +1,6 @@
 <?php
-    $nombre = '';
-    $apellido = '';
-    $email = '';
-    $telefono = '';
-    $empresa = '';
-    $asunto = '';
-    $mensaje = '';
-
-    $errores = [];
-
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // Validar que los campos no esten vacios
-        $nombre = ($_POST['nombre']);
-        $apellido = $_POST['apellido'];
-        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-        $telefono = filter_var($_POST['tel'], FILTER_VALIDATE_INT);
-        $empresa = $_POST['empresa'];
-        $asunto = $_POST['asunto'];
-        $mensaje = $_POST['mensaje'];
-
-        // Validar que los campos tengan el contenido adecuado
-        if (!$nombre) {
-            $errores[] = 'El nombre es obligatorio';
-        }
-
-        if (!$apellido) {
-            $errores[] = 'El apellido es obligatorio';
-        }
-
-        if (!$email) {
-            $errores[] = 'El e-mail es obligatorio o no es válido';
-        }
-
-        if (!$asunto) {
-            $errores[] = 'El asunto es obligatorio';
-        }
-
-        if (!$mensaje) {
-            $errores[] = 'El mensaje es obligatorio';
-        }
-    }
+    session_start();
+    include 'validacion.php';
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +12,7 @@
     <link rel="stylesheet" href="/build/icomoon/style.css">
     <link rel="stylesheet" href="/build/css/app.css">
     <link rel="shortcut icon" href="build/img/favicon.png">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <title>Lucas González | Portfolio</title>
 </head>
 <body>
@@ -219,21 +181,45 @@
                         <fieldset>
                             <legend>Envíame un E-mail</legend>
                             <div class="nombre-apellido">
-                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *" value="<?php echo $nombre ?>" required>
-                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *" value="<?php echo $apellido ?>" required>
+                                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre *" value="<?php echo $nombre ?>">
+                                <input type="text" name="apellido" id="apellido" placeholder="Tu Apellido *" value="<?php echo $apellido ?>">
                             </div>
 
-                            <input type="email" name="email" id="email" placeholder="Tu Email *" value="<?php echo $email ?>" required>
+                            <input type="email" name="email" id="email" placeholder="Tu Email *" value="<?php echo $email ?>">
                             <input type="tel" name="tel" id="tel" placeholder="Tu Teléfono" value="<?php echo $telefono ?>">
                             <input type="text" name="empresa" id="empresa" placeholder="Nombre Empresa" value="<?php echo $empresa ?>">
-                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>" required>
-                            <textarea name="mensaje" id="mensaje" required><?php echo $mensaje ?></textarea>
+                            <input type="text" name="asunto" id="asunto" placeholder="Asunto del E-mail *" value="<?php echo $asunto ?>">
+                            <textarea name="mensaje" id="mensaje"><?php echo $mensaje ?></textarea>
 
                             <?php foreach($errores as $error): ?>
                                 <div class="alerta error">
                                     <?php echo $error; ?>
                                 </div>
                             <?php endforeach; ?>
+
+                            <?php if(isset($_SESSION['resultado'])):
+                                if($_SESSION['resultado'] === 0):?>
+                                    <script>
+                                        Swal.fire({
+                                            icon: 'error',
+                                            title: 'Error al enviar email',
+                                            showConfirmButton: false,
+                                            timer: 2000
+                                        })
+                                    </script>
+                                <?php endif;
+
+                                if($_SESSION['resultado'] === 1):?>
+                                    <script>
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Email enviado correctamente',
+                                            showConfirmButton: false,
+                                            timer: 2000
+                                        })
+                                    </script>
+                                <?php endif;
+                            endif; ?>
 
                             <input type="submit" value="Enviar" class="btn">
                         </fieldset>
@@ -255,11 +241,6 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/59e2cd1765.js" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="/build/js/bundle.min.js"></script>
 </body>
 </html>
-<?php
-    // Enviar email
-    include 'correo.php';
-?>
